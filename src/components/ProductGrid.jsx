@@ -10,7 +10,7 @@ useEffect(() => {
 
   async function getData() {
 
-    const res = await fetch("http://localhost:3004/product");
+    const res = await fetch("https://backend-ecommerse-1.onrender.com/product");
     const data = await res.json();
 
     setProducts(data);
@@ -33,7 +33,7 @@ useEffect(() => {
           onClick={() => navigate(`/product/${p._id}`)}
         >
           <div className="product-image-wrap">
-            <img src={'http://localhost:3004/product/'+p.profile} alt={p.name} loading="lazy" />
+            <img src={'https://backend-ecommerse-1.onrender.com/product/'+p.profile} alt={p.name} loading="lazy" />
             {p.badge && <span className="badge">{p.badge}</span>}
           </div>
           <div className="product-info">
